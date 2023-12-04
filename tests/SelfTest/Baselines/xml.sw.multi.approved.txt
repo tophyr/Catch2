@@ -13708,7 +13708,7 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case method with test types specified inside std::tuple - MyTypes - 0" tags="[class][list][template]" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
+  <TestCase name="Template test case method with test types specified inside std::tuple - MyTypes - char" tags="[class][list][template]" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
       <Original>
         Template_Fixture&lt;TestType>::m_a == 1
@@ -13719,18 +13719,7 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case method with test types specified inside std::tuple - MyTypes - 1" tags="[class][list][template]" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
-    <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
-      <Original>
-        Template_Fixture&lt;TestType>::m_a == 1
-      </Original>
-      <Expanded>
-        1 == 1
-      </Expanded>
-    </Expression>
-    <OverallResult success="true" skips="0"/>
-  </TestCase>
-  <TestCase name="Template test case method with test types specified inside std::tuple - MyTypes - 2" tags="[class][list][template]" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
+  <TestCase name="Template test case method with test types specified inside std::tuple - MyTypes - double" tags="[class][list][template]" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
       <Original>
         Template_Fixture&lt;TestType>::m_a == 1
@@ -13741,7 +13730,18 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--0" tags="[class][custom_separator][list][template]" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
+  <TestCase name="Template test case method with test types specified inside std::tuple - MyTypes - int" tags="[class][list][template]" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
+    <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Class.tests.cpp" >
+      <Original>
+        Template_Fixture&lt;TestType>::m_a == 1
+      </Original>
+      <Expanded>
+        1 == 1
+      </Expanded>
+    </Expression>
+    <OverallResult success="true" skips="0"/>
+  </TestCase>
+  <TestCase name="Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--char" tags="[class][custom_separator][list][template]" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
       <Original>
         Template_Fixture&lt;TestType>::m_a == 1
@@ -13752,18 +13752,7 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--1" tags="[class][custom_separator][list][template]" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
-    <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
-      <Original>
-        Template_Fixture&lt;TestType>::m_a == 1
-      </Original>
-      <Expanded>
-        1 == 1
-      </Expanded>
-    </Expression>
-    <OverallResult success="true" skips="0"/>
-  </TestCase>
-  <TestCase name="Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--2" tags="[class][custom_separator][list][template]" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
+  <TestCase name="Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--double" tags="[class][custom_separator][list][template]" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
       <Original>
         Template_Fixture&lt;TestType>::m_a == 1
@@ -13774,7 +13763,18 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - 0" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
+  <TestCase name="Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--int" tags="[class][custom_separator][list][template]" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
+    <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/CustomNaming.tests.cpp" >
+      <Original>
+        Template_Fixture&lt;TestType>::m_a == 1
+      </Original>
+      <Expanded>
+        1 == 1
+      </Expanded>
+    </Expression>
+    <OverallResult success="true" skips="0"/>
+  </TestCase>
+  <TestCase name="Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - NonCopyableAndNonMovableType" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
       <Original>
         sizeof(TestType) > 0
@@ -13785,7 +13785,7 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - 1" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
+  <TestCase name="Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - float" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
       <Original>
         sizeof(TestType) > 0
@@ -13796,7 +13796,7 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - 0" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
+  <TestCase name="Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - NonDefaultConstructibleType" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
       <Original>
         sizeof(TestType) > 0
@@ -13807,7 +13807,7 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - 1" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
+  <TestCase name="Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - float" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
       <Original>
         sizeof(TestType) > 0
@@ -13818,18 +13818,7 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case with test types specified inside std::tuple - MyTypes - 0" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
-    <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
-      <Original>
-        sizeof(TestType) > 0
-      </Original>
-      <Expanded>
-        4 > 0
-      </Expanded>
-    </Expression>
-    <OverallResult success="true" skips="0"/>
-  </TestCase>
-  <TestCase name="Template test case with test types specified inside std::tuple - MyTypes - 1" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
+  <TestCase name="Template test case with test types specified inside std::tuple - MyTypes - char" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
       <Original>
         sizeof(TestType) > 0
@@ -13840,7 +13829,18 @@ Message from section two
     </Expression>
     <OverallResult success="true" skips="0"/>
   </TestCase>
-  <TestCase name="Template test case with test types specified inside std::tuple - MyTypes - 2" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
+  <TestCase name="Template test case with test types specified inside std::tuple - MyTypes - float" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
+    <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
+      <Original>
+        sizeof(TestType) > 0
+      </Original>
+      <Expanded>
+        4 > 0
+      </Expanded>
+    </Expression>
+    <OverallResult success="true" skips="0"/>
+  </TestCase>
+  <TestCase name="Template test case with test types specified inside std::tuple - MyTypes - int" tags="[list][template]" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
     <Expression success="true" type="REQUIRE" filename="tests/<exe-name>/UsageTests/Misc.tests.cpp" >
       <Original>
         sizeof(TestType) > 0

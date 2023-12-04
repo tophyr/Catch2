@@ -14,6 +14,14 @@
 #include <catch2/internal/catch_meta.hpp>
 #include <catch2/internal/catch_unique_name.hpp>
 
+#if defined(CATCH_CONFIG_USE_RTTI) || (defined(CATCH_INTERNAL_RTTI_SUPPORTED) && !defined(CATCH_INTERNAL_USE_NO_RTTI))
+    #define CATCH_INTERNAL_USE_RTTI
+    #include <typeinfo>
+    #include <memory>
+#if !defined(_MSC_VER)
+    #include <cxxabi.h>
+#endif // _MSC_VER
+#endif // CATCH_CONFIG_USE_RTTI + friends
 
 // GCC 5 and older do not properly handle disabling unused-variable warning
 // with a _Pragma. This means that we have to leak the suppression to the
@@ -345,6 +353,14 @@ namespace Catch {
     template <typename T>
     struct IndexedTestTypeName {
         std::string operator()(size_t index) const {
+#if defined(CATCH_INTERNAL_USE_RTTI)
+            const char* name = typeid(T).name();
+            int status = 0;
+            std::unique_ptr<char, void(*)(void*)> demangled{abi::__cxa_demangle(name, nullptr, nullptr, &status), std::free};
+            if (status == 0) {
+                return demangled.get();
+            }
+#endif
             return std::to_string(index);
         }
     };

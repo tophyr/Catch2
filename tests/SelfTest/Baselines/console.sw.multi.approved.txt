@@ -11777,7 +11777,7 @@ with expansion:
 
 -------------------------------------------------------------------------------
 Template test case method with test types specified inside std::tuple - MyTypes
-- 0
+- char
 -------------------------------------------------------------------------------
 Class.tests.cpp:<line number>
 ...............................................................................
@@ -11789,7 +11789,7 @@ with expansion:
 
 -------------------------------------------------------------------------------
 Template test case method with test types specified inside std::tuple - MyTypes
-- 1
+- double
 -------------------------------------------------------------------------------
 Class.tests.cpp:<line number>
 ...............................................................................
@@ -11797,11 +11797,11 @@ Class.tests.cpp:<line number>
 Class.tests.cpp:<line number>: PASSED:
   REQUIRE( Template_Fixture<TestType>::m_a == 1 )
 with expansion:
-  1 == 1
+  1.0 == 1
 
 -------------------------------------------------------------------------------
 Template test case method with test types specified inside std::tuple - MyTypes
-- 2
+- int
 -------------------------------------------------------------------------------
 Class.tests.cpp:<line number>
 ...............................................................................
@@ -11809,11 +11809,11 @@ Class.tests.cpp:<line number>
 Class.tests.cpp:<line number>: PASSED:
   REQUIRE( Template_Fixture<TestType>::m_a == 1 )
 with expansion:
-  1.0 == 1
+  1 == 1
 
 -------------------------------------------------------------------------------
 Template test case method with test types specified inside std::tuple with a
-custom separator--MyTypes--0
+custom separator--MyTypes--char
 -------------------------------------------------------------------------------
 CustomNaming.tests.cpp:<line number>
 ...............................................................................
@@ -11825,19 +11825,7 @@ with expansion:
 
 -------------------------------------------------------------------------------
 Template test case method with test types specified inside std::tuple with a
-custom separator--MyTypes--1
--------------------------------------------------------------------------------
-CustomNaming.tests.cpp:<line number>
-...............................................................................
-
-CustomNaming.tests.cpp:<line number>: PASSED:
-  REQUIRE( Template_Fixture<TestType>::m_a == 1 )
-with expansion:
-  1 == 1
-
--------------------------------------------------------------------------------
-Template test case method with test types specified inside std::tuple with a
-custom separator--MyTypes--2
+custom separator--MyTypes--double
 -------------------------------------------------------------------------------
 CustomNaming.tests.cpp:<line number>
 ...............................................................................
@@ -11848,8 +11836,21 @@ with expansion:
   1.0 == 1
 
 -------------------------------------------------------------------------------
+Template test case method with test types specified inside std::tuple with a
+custom separator--MyTypes--int
+-------------------------------------------------------------------------------
+CustomNaming.tests.cpp:<line number>
+...............................................................................
+
+CustomNaming.tests.cpp:<line number>: PASSED:
+  REQUIRE( Template_Fixture<TestType>::m_a == 1 )
+with expansion:
+  1 == 1
+
+-------------------------------------------------------------------------------
 Template test case with test types specified inside non-copyable and non-
-movable std::tuple - NonCopyableAndNonMovableTypes - 0
+movable std::tuple - NonCopyableAndNonMovableTypes -
+NonCopyableAndNonMovableType
 -------------------------------------------------------------------------------
 Misc.tests.cpp:<line number>
 ...............................................................................
@@ -11861,7 +11862,7 @@ with expansion:
 
 -------------------------------------------------------------------------------
 Template test case with test types specified inside non-copyable and non-
-movable std::tuple - NonCopyableAndNonMovableTypes - 1
+movable std::tuple - NonCopyableAndNonMovableTypes - float
 -------------------------------------------------------------------------------
 Misc.tests.cpp:<line number>
 ...............................................................................
@@ -11873,7 +11874,7 @@ with expansion:
 
 -------------------------------------------------------------------------------
 Template test case with test types specified inside non-default-constructible
-std::tuple - MyNonDefaultConstructibleTypes - 0
+std::tuple - MyNonDefaultConstructibleTypes - NonDefaultConstructibleType
 -------------------------------------------------------------------------------
 Misc.tests.cpp:<line number>
 ...............................................................................
@@ -11885,7 +11886,7 @@ with expansion:
 
 -------------------------------------------------------------------------------
 Template test case with test types specified inside non-default-constructible
-std::tuple - MyNonDefaultConstructibleTypes - 1
+std::tuple - MyNonDefaultConstructibleTypes - float
 -------------------------------------------------------------------------------
 Misc.tests.cpp:<line number>
 ...............................................................................
@@ -11896,18 +11897,7 @@ with expansion:
   4 > 0
 
 -------------------------------------------------------------------------------
-Template test case with test types specified inside std::tuple - MyTypes - 0
--------------------------------------------------------------------------------
-Misc.tests.cpp:<line number>
-...............................................................................
-
-Misc.tests.cpp:<line number>: PASSED:
-  REQUIRE( sizeof(TestType) > 0 )
-with expansion:
-  4 > 0
-
--------------------------------------------------------------------------------
-Template test case with test types specified inside std::tuple - MyTypes - 1
+Template test case with test types specified inside std::tuple - MyTypes - char
 -------------------------------------------------------------------------------
 Misc.tests.cpp:<line number>
 ...............................................................................
@@ -11918,7 +11908,19 @@ with expansion:
   1 > 0
 
 -------------------------------------------------------------------------------
-Template test case with test types specified inside std::tuple - MyTypes - 2
+Template test case with test types specified inside std::tuple - MyTypes -
+float
+-------------------------------------------------------------------------------
+Misc.tests.cpp:<line number>
+...............................................................................
+
+Misc.tests.cpp:<line number>: PASSED:
+  REQUIRE( sizeof(TestType) > 0 )
+with expansion:
+  4 > 0
+
+-------------------------------------------------------------------------------
+Template test case with test types specified inside std::tuple - MyTypes - int
 -------------------------------------------------------------------------------
 Misc.tests.cpp:<line number>
 ...............................................................................

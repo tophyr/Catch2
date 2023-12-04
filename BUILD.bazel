@@ -54,6 +54,8 @@ expand_template(
         "#cmakedefine CATCH_CONFIG_SHARED_LIBRARY": "",
         "#cmakedefine CATCH_CONFIG_EXPERIMENTAL_STATIC_ANALYSIS_SUPPORT": "",
         "#cmakedefine CATCH_CONFIG_USE_ASYNC": "",
+        "#cmakedefine CATCH_CONFIG_USE_NO_RTTI": "",
+        "#cmakedefine CATCH_CONFIG_USE_RTTI": "",
         "#cmakedefine CATCH_CONFIG_WCHAR": "",
         "#cmakedefine CATCH_CONFIG_WINDOWS_CRTDBG": "",
         "#cmakedefine CATCH_CONFIG_WINDOWS_SEH": "",

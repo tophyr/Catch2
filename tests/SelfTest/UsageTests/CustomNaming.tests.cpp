@@ -14,6 +14,10 @@
 // It must be defined before the macro header is included.
 #define CATCH_CONFIG_NAME_SEPARATOR "--"
 
+// `CATCH_CONFIG_USE_RTTI` turns on RTTI usage for typename calculation. It must
+// also, until it becomes a default, be defined before inclusion of the headers.
+#define CATCH_CONFIG_USE_RTTI
+
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/catch_template_test_macros.hpp>
 #include <array>
@@ -62,12 +66,15 @@ TEMPLATE_PRODUCT_TEST_CASE_METHOD_SIG(Template_Fixture_2, "A TEMPLATE_PRODUCT_TE
     REQUIRE(Template_Fixture_2<TestType>{}.m_a.size() >= 2);
 }
 
+// verify that we are actually building with RTTI, so that these tests will produce the expected output
+#if !defined(CATCH_INTERNAL_USE_RTTI)
+    #error Not using RTTI when we should.
+#endif
 using MyTypes = std::tuple<int, char, double>;
 TEMPLATE_LIST_TEST_CASE_METHOD(Template_Fixture, "Template test case method with test types specified inside std::tuple with a custom separator", "[class][template][list][custom_separator]", MyTypes)
 {
     REQUIRE( Template_Fixture<TestType>::m_a == 1 );
 }
-
 
 // Creating an IndextTestTypeName specialization should alter how template list tests are named.
 template<char C> struct NamedType {};

@@ -444,4 +444,18 @@
 #    define CATCH_EXPORT
 #endif
 
+#if defined(__clang__)
+#   if __has_feature(cxx_rtti)
+#       define CATCH_INTERNAL_RTTI_SUPPORTED
+#   endif
+#elif defined(__GNUG__)
+#   if defined(__GXX_RTTI)
+#       define CATCH_INTERNAL_RTTI_SUPPORTED
+#   endif
+#elif defined(_MSC_VER)
+#   if defined(_CPPRTTI)
+#       define CATCH_INTERNAL_RTTI_SUPPORTED
+#   endif
+#endif
+
 #endif // CATCH_COMPILER_CAPABILITIES_HPP_INCLUDED

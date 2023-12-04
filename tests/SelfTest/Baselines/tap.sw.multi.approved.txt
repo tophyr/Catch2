@@ -2824,31 +2824,31 @@ ok {test-number} - Template_Foo<TestType>{}.size() == 0 for: 0 == 0
 ok {test-number} - Template_Foo<TestType>{}.size() == 0 for: 0 == 0
 # Template list test case with specialized IndexedTestTypeName--NamedTypes--C
 ok {test-number} - Template_Foo<TestType>{}.size() == 0 for: 0 == 0
-# Template test case method with test types specified inside std::tuple - MyTypes - 0
+# Template test case method with test types specified inside std::tuple - MyTypes - char
 ok {test-number} - Template_Fixture<TestType>::m_a == 1 for: 1 == 1
-# Template test case method with test types specified inside std::tuple - MyTypes - 1
-ok {test-number} - Template_Fixture<TestType>::m_a == 1 for: 1 == 1
-# Template test case method with test types specified inside std::tuple - MyTypes - 2
+# Template test case method with test types specified inside std::tuple - MyTypes - double
 ok {test-number} - Template_Fixture<TestType>::m_a == 1 for: 1.0 == 1
-# Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--0
+# Template test case method with test types specified inside std::tuple - MyTypes - int
 ok {test-number} - Template_Fixture<TestType>::m_a == 1 for: 1 == 1
-# Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--1
+# Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--char
 ok {test-number} - Template_Fixture<TestType>::m_a == 1 for: 1 == 1
-# Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--2
+# Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--double
 ok {test-number} - Template_Fixture<TestType>::m_a == 1 for: 1.0 == 1
-# Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - 0
+# Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--int
+ok {test-number} - Template_Fixture<TestType>::m_a == 1 for: 1 == 1
+# Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - NonCopyableAndNonMovableType
 ok {test-number} - sizeof(TestType) > 0 for: 1 > 0
-# Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - 1
+# Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - float
 ok {test-number} - sizeof(TestType) > 0 for: 4 > 0
-# Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - 0
+# Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - NonDefaultConstructibleType
 ok {test-number} - sizeof(TestType) > 0 for: 1 > 0
-# Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - 1
+# Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - float
 ok {test-number} - sizeof(TestType) > 0 for: 4 > 0
-# Template test case with test types specified inside std::tuple - MyTypes - 0
-ok {test-number} - sizeof(TestType) > 0 for: 4 > 0
-# Template test case with test types specified inside std::tuple - MyTypes - 1
+# Template test case with test types specified inside std::tuple - MyTypes - char
 ok {test-number} - sizeof(TestType) > 0 for: 1 > 0
-# Template test case with test types specified inside std::tuple - MyTypes - 2
+# Template test case with test types specified inside std::tuple - MyTypes - float
+ok {test-number} - sizeof(TestType) > 0 for: 4 > 0
+# Template test case with test types specified inside std::tuple - MyTypes - int
 ok {test-number} - sizeof(TestType) > 0 for: 4 > 0
 # TemplateTest: vectors can be sized and resized - float
 ok {test-number} - v.size() == 5 for: 5 == 5

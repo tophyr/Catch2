@@ -261,19 +261,19 @@ Message from section two
 :test-result: PASS Template list test case with specialized IndexedTestTypeName--NamedTypes--A
 :test-result: PASS Template list test case with specialized IndexedTestTypeName--NamedTypes--B
 :test-result: PASS Template list test case with specialized IndexedTestTypeName--NamedTypes--C
-:test-result: PASS Template test case method with test types specified inside std::tuple - MyTypes - 0
-:test-result: PASS Template test case method with test types specified inside std::tuple - MyTypes - 1
-:test-result: PASS Template test case method with test types specified inside std::tuple - MyTypes - 2
-:test-result: PASS Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--0
-:test-result: PASS Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--1
-:test-result: PASS Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--2
-:test-result: PASS Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - 0
-:test-result: PASS Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - 1
-:test-result: PASS Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - 0
-:test-result: PASS Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - 1
-:test-result: PASS Template test case with test types specified inside std::tuple - MyTypes - 0
-:test-result: PASS Template test case with test types specified inside std::tuple - MyTypes - 1
-:test-result: PASS Template test case with test types specified inside std::tuple - MyTypes - 2
+:test-result: PASS Template test case method with test types specified inside std::tuple - MyTypes - char
+:test-result: PASS Template test case method with test types specified inside std::tuple - MyTypes - double
+:test-result: PASS Template test case method with test types specified inside std::tuple - MyTypes - int
+:test-result: PASS Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--char
+:test-result: PASS Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--double
+:test-result: PASS Template test case method with test types specified inside std::tuple with a custom separator--MyTypes--int
+:test-result: PASS Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - NonCopyableAndNonMovableType
+:test-result: PASS Template test case with test types specified inside non-copyable and non-movable std::tuple - NonCopyableAndNonMovableTypes - float
+:test-result: PASS Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - NonDefaultConstructibleType
+:test-result: PASS Template test case with test types specified inside non-default-constructible std::tuple - MyNonDefaultConstructibleTypes - float
+:test-result: PASS Template test case with test types specified inside std::tuple - MyTypes - char
+:test-result: PASS Template test case with test types specified inside std::tuple - MyTypes - float
+:test-result: PASS Template test case with test types specified inside std::tuple - MyTypes - int
 :test-result: PASS TemplateTest: vectors can be sized and resized - float
 :test-result: PASS TemplateTest: vectors can be sized and resized - int
 :test-result: PASS TemplateTest: vectors can be sized and resized - std::string
