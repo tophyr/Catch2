@@ -12,6 +12,7 @@
 #include <catch2/internal/catch_compiler_capabilities.hpp>
 #include <catch2/internal/catch_preprocessor.hpp>
 #include <catch2/internal/catch_meta.hpp>
+#include <catch2/internal/catch_to_string.hpp>
 #include <catch2/internal/catch_unique_name.hpp>
 
 #if defined(CATCH_CONFIG_USE_RTTI) || (defined(CATCH_INTERNAL_RTTI_SUPPORTED) && !defined(CATCH_INTERNAL_USE_NO_RTTI))
@@ -353,6 +354,33 @@ namespace Catch {
     template <typename T>
     struct IndexedTestTypeName {
         std::string operator()(size_t index) const {
+#if defined(CATCH_CONFIG_CPP17_STRING_VIEW) || !defined(CATCH_CONFIG_NO_CPP17_STRING_VIEW)
+    #if defined(__clang__)
+            constexpr auto prefix   = std::string_view{"[T = "};
+            constexpr auto suffix   = "]";
+            constexpr auto function = std::string_view{__PRETTY_FUNCTION__};
+    #elif defined(__GNUC__)
+            constexpr auto prefix   = std::string_view{"with T = "};
+            constexpr auto suffix   = "; ";
+            constexpr auto function = std::string_view{__PRETTY_FUNCTION__};
+    #elif defined(_MSC_VER)
+            constexpr auto prefix   = std::string_view{"get_type_name<"};
+            constexpr auto suffix   = ">(size_t)";
+            constexpr auto function = std::string_view{__FUNCSIG__};
+    #else
+            constexpr std::string_view prefix;
+            constexpr std::string_view suffix;
+            constexpr std::string_view function;
+            if (false) // make sure we don't execute this substr block immediately below
+    #endif
+            {
+                const auto start = function.find(prefix) + prefix.size();
+                const auto end = function.find(suffix, start);
+                const auto size = end - start;
+                return std::string{function.substr(start, size)};
+            }
+#endif
+
 #if defined(CATCH_INTERNAL_USE_RTTI)
             const char* name = typeid(T).name();
             int status = 0;
@@ -361,9 +389,9 @@ namespace Catch {
                 return demangled.get();
             }
 #endif
-            return std::to_string(index);
+            return Catch::to_string<size_t>(index);
         }
     };
-}
+} // namespace Catch
 
 #endif // CATCH_TEMPLATE_TEST_REGISTRY_HPP_INCLUDED
